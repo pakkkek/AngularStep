@@ -6,28 +6,15 @@ import 'zone.js';
   selector: 'app-root',
   standalone: true,
   template: `
-    <h1>Hello from {{ name }}!</h1>
-    <p>{{ monologue }}</p>
-    <h2>Photo Gallery</h2>
-    <div *ngFor="let photo of photos">
-      <img [src]="photo" alt="Photo">
-    </div>
+    <h2>{{ hobbyName }}</h2>
+    <p>{{ hobbyDescription }}</p>
+    <img src="assets/images/hobby.jpg" alt="hobby">
+    <img src="assets/images/person.jpg" alt="person">
   `,
 })
 export class App {
-  name = 'Angular';
-  monologue: string = `
-    To be, or not to be, that is the question:
-    Whether 'tis nobler in the mind to suffer
-    The slings and arrows of outrageous fortune,
-    Or to take arms against a sea of troubles
-    And, by opposing, end them.
-  `;
-  photos: string[] = [
-    'assets/images/car.jpg',
-    'assets/images/logo.jpg',
-    'assets/images/founder.jpg',
-  ];
+  hobbyName: string = 'UI/UX Design';
+  hobbyDescription: string = 'An exciting hobby that allows you to express your creativity and create impressive visual creations.';
 }
 
 bootstrapApplication(App);
