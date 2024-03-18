@@ -6,28 +6,30 @@ import 'zone.js';
   selector: 'app-root',
   standalone: true,
   template: `
-    <h1>Hello from {{ name }}!</h1>
-    <p>{{ monologue }}</p>
-    <h2>Photo Gallery</h2>
-    <div *ngFor="let photo of photos">
-      <img [src]="photo" alt="Photo">
-    </div>
+  <div>
+  <h1>
+    Моє резюме
+  </h1>
+  <img src="./images/profile.jpg" alt="Моя фотографія">
+  <div>
+  <h2>Досвід роботи</h2>
+  <p>2022 - 2024 ITStep</p>
+  </div>
+  <div>
+  <h2>Навички та сертифікати</h2>
+  <p>Programming languages: C/C++, C#, HTML/CSS, JavaScript</p>
+  </div>
+  <div>
+    <h2>Мої ресурси:</h2>
+    <ul>
+      <li><a href="https://github.com/pakkkek">GitHub</a></li>
+    </ul>
+  </div>
+  </div>
   `,
 })
 export class App {
-  name = 'Angular';
-  monologue: string = `
-    To be, or not to be, that is the question:
-    Whether 'tis nobler in the mind to suffer
-    The slings and arrows of outrageous fortune,
-    Or to take arms against a sea of troubles
-    And, by opposing, end them.
-  `;
-  photos: string[] = [
-    'assets/images/car.jpg',
-    'assets/images/logo.jpg',
-    'assets/images/founder.jpg',
-  ];
+  
 }
 
 bootstrapApplication(App);
